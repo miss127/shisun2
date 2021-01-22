@@ -1,0 +1,13 @@
+nav{
+    padding: 0.5rem;
+    border: 1px solid lightblue;
+    height: 80vh;
+}
+li:hover
+{
+    background-color: rgb(66, 158, 250);
+    cursor: pointer;
+}
+li{
+    font-size: 1rem;
+}

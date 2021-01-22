@@ -1,0 +1,32 @@
+<form action="" [formGroup]="myForm">
+    <div class="form-group">
+        <label for="ProductName">产品名称</label>
+        <input type="text" class="form-control" id="ProductName" name="ProductName" [formControl]='ProductName'>
+    </div>
+    <div class="form-group">
+        <label for="ProductKey">产品密钥</label>
+        <input type="text " class="form-control" id="ProductKey" name="ProductKey" [formControl]='ProductKey'>
+    </div>
+</form>
+<div>
+    <button type="button" class="btn btn-primary" (click)="search()">查询</button>
+    <button type="button" class="btn btn-success" (click)="add()">添加</button>
+    <button type="button" class="btn btn-danger" (click)="delete()">删除</button>
+    <button type="button" class="btn btn-warning" (click)="update()">修改</button>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">产品名称</th>
+            <th scope="col">产品密钥</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let product of products$ | async;let i =index' (click)="select(product)">
+            <th scope="row">{{i}}</th>
+            <td>{{product.ProductName}}</td>
+            <td>{{product.ProductKey}}</td>
+        </tr>
+    </tbody>
+</table>

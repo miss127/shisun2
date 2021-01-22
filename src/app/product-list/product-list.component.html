@@ -1,0 +1,35 @@
+<div class="row">
+    <div style="margin-right:8vw">
+        <img *ngIf="light1==1" src="../../assets/imgs/onlight.png" alt="">
+        <img *ngIf="light1==0" src="../../assets/imgs/offlight.png" alt="">
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;厨房照明灯</div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-secondary" (click)="onlight1()">打开</button>
+            <button type="button" class="btn btn-secondary" (click)="offlight1()">关闭</button>
+        </div>
+    </div>
+    <div style="margin-right:8vw">
+        <img *ngIf="light2==1" src="../../assets/imgs/厨房（有污渍）.png" alt="">
+        <img *ngIf="light2==0" src="../../assets/imgs/厨房.jpg" alt="">
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            污渍检测器</div>
+    </div>
+    <div style="margin-right:8vw">
+        <img *ngIf="light3==1" src="../../assets/imgs/橱柜（有老鼠蟑螂）.png" alt="">
+        <img *ngIf="light3==0" src="../../assets/imgs/橱柜.jpg" alt="">
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            生物监测器</div>
+    </div>
+    <div style="margin-right:8vw">
+        <img *ngIf="light4==1" src="../../assets/imgs/报警器(开).png" alt="">
+        <img *ngIf="light4==0" src="../../assets/imgs/报警器(关).png" alt="">
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            烟雾报警器</div>
+    </div>
+</div>
+<div>
+    <echarts [options]="chartOption" [merge]="updateOption"></echarts>
+</div>

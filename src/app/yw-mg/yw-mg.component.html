@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="panel-body" style="height: 40vh; width: 40vw; overflow:auto">
+        <div style="border: 1px  #000000; width: 90%; margin: 0 auto;">
+            <span>
+                <div *ngFor='let message of message' style="white-space: pre-line;">
+                    <div>{{message.deviceName}}</div>
+                    <div>{{message.value}}</div>
+                    <div>{{message.CurrentTime}}</div>
+                </div>
+            </span>
+        </div>
+    </div>
+    <div style="margin-left:20vw">
+        <img *ngIf="light1==1" src="../../assets/imgs/onlight.png" alt="">
+        <img *ngIf="light1==0" src="../../assets/imgs/offlight.png" alt="">
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;厨房照明灯</div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-secondary" (click)="onlight1()">打开</button>
+            <button type="button" class="btn btn-secondary" (click)="offlight1()">关闭</button>
+        </div>
+    </div>
+</div>

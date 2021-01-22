@@ -1,0 +1,42 @@
+<form [formGroup]="myForm">
+    <div class="form-group">
+        <label for="Key">产品密钥</label>
+        <input type="text" class="form-control" id="Key" name="Key" [formControl]='ProductKey'>
+    </div>
+    <div class="form-group">
+        <label for="Name">设备名称</label>
+        <input type="text" class="form-control" id="Name" name="Name" [formControl]='DeviceName'>
+    </div>
+    <div class="form-group">
+        <label for="Secret">设备密钥</label>
+        <input type="text" class="form-control" id="Secret" name="Secret" [formControl]='DeviceSecret'>
+    </div>
+    <!-- <div class="form-group">
+        <label for="IotId">IotId</label>
+        <input type="text" class="form-control" id="IotId" name="IotId" [formControl]='IotId'>
+    </div> -->
+</form>
+
+<div>
+    <button type="button" class="btn btn-primary" (click)="search()">查询</button>
+    <button type="button" class="btn btn-success" (click)="add()">添加</button>
+    <button type="button" class="btn btn-danger" (click)="delete()">删除</button>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">产品密钥</th>
+            <th scope="col">设备名称</th>
+            <th scope="col">设备密钥</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let sb of sbs$ | async;let i=index' (click)="select(sb)">
+            <th scope="row">{{i}}</th>
+            <td>{{sb.ProductKey}}</td>
+            <td>{{sb.DeviceName}}</td>
+            <td>{{sb.DeviceSecret}}</td>
+        </tr>
+    </tbody>
+</table>

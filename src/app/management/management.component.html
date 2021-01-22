@@ -1,0 +1,14 @@
+<div class="row">
+    <ul class="list-group" style="width: 10vw;">
+        <li class="list-group-item" [routerLink]="['prolist']">产品列表</li>
+        <li class="list-group-item" [routerLink]="['promg']">产品管理</li>
+        <li class="list-group-item" [routerLink]="['sb']">设备管理</li>
+        <li *ngIf="hello==3" class="list-group-item" [routerLink]="['ywdp']">运维大屏</li>
+        <li *ngIf="hello==3" class="list-group-item" [routerLink]="['user']">用户管理</li>
+        <li *ngIf="hello==3" class="list-group-item" [routerLink]="['map']">地图</li>
+        <li class="list-group-item" [routerLink]="['exit']">退出</li>
+    </ul>
+    <div style="width:85vw;margin-left: 5vw;">
+        <router-outlet></router-outlet>
+    </div>
+</div>

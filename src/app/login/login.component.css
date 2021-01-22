@@ -1,0 +1,17 @@
+form{
+  width: 40rem;
+}
+.page{
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+.a{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+} */

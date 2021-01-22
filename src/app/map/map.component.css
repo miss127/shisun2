@@ -1,0 +1,19 @@
+#panel{
+    position: fixed;
+    background-color: white;
+    max-height: 50%;
+    overflow-y: auto;
+    top: 5rem;
+    right: 1rem;
+    width: 20vw;
+}
+#panel .amap-call {
+    background-color: #009cf9;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+#panel .amap-lib-walking {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    overflow: hidden;
+}

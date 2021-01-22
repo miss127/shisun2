@@ -1,0 +1,9 @@
+.beijing{
+    background-image:url("../../assets/imgs/背景1.jpg");
+    /* 将背景大小改为100% */
+    /* background-size: 100%; */
+    /* 背景不重复显示 */
+    /* background-repeat: no-repeat; */
+    width: 100vw;
+    height: 88vh;
+}
